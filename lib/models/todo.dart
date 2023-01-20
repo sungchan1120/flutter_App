@@ -27,6 +27,9 @@ class Todo {
   Todo.fromSnapshot(DocumentReference document) {
     Map<String, dynamic> map = document.data() as Map<String, dynamic>;
     id = map['id'];
+    title = map['title'];
+    description = map['description'];
+    reference = document.reference;
   }
 }
 
